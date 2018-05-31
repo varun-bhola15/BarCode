@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BarCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="road2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Qsc-eD-p2G">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1pw-90-2Vc">
+                                <rect key="frame" x="16" y="80" width="343" height="29"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="BarCode"/>
+                                    <segment title="QRCode"/>
+                                </segments>
+                                <color key="tintColor" red="0.20784313725490197" green="0.29411764705882354" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6RV-YA-gL0">
+                                <rect key="frame" x="123" y="133" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="Rx7-nf-8AD"/>
+                                    <constraint firstAttribute="height" constant="128" id="uG3-hj-N9p"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter description here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="12G-Wu-Fxd">
+                                <rect key="frame" x="16" y="269" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QmO-fl-faM"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="0.25780032320000001" blue="0.1170087476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObO-h1-n4z">
+                                <rect key="frame" x="137" y="307" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Jy5-zh-RBO"/>
+                                    <constraint firstAttribute="width" constant="100" id="eyF-ZL-kP4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Generate"/>
+                                <connections>
+                                    <action selector="generateBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OJU-dy-TlT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6RV-YA-gL0" secondAttribute="trailing" constant="124" id="0uh-sQ-Nyk"/>
+                            <constraint firstItem="ObO-h1-n4z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="6jv-VE-XSF"/>
+                            <constraint firstItem="1pw-90-2Vc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Iog-jY-muO"/>
+                            <constraint firstItem="12G-Wu-Fxd" firstAttribute="top" secondItem="6RV-YA-gL0" secondAttribute="bottom" constant="8" id="NGS-tu-QNc"/>
+                            <constraint firstItem="12G-Wu-Fxd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="NmC-Z8-8WJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1pw-90-2Vc" secondAttribute="trailing" constant="16" id="SIL-LB-WOl"/>
+                            <constraint firstItem="6RV-YA-gL0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="f1q-D7-Xqk"/>
+                            <constraint firstItem="6RV-YA-gL0" firstAttribute="top" secondItem="1pw-90-2Vc" secondAttribute="bottom" constant="25" id="j6c-D8-FDP"/>
+                            <constraint firstItem="Qsc-eD-p2G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="k2w-db-wxp"/>
+                            <constraint firstItem="ObO-h1-n4z" firstAttribute="top" secondItem="12G-Wu-Fxd" secondAttribute="bottom" constant="8" id="kwL-HE-ys5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ObO-h1-n4z" secondAttribute="trailing" constant="138" id="oE1-W0-yhJ"/>
+                            <constraint firstItem="Qsc-eD-p2G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="s3Y-B2-fqk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="12G-Wu-Fxd" secondAttribute="trailing" constant="16" id="uZt-Nu-vzO"/>
+                            <constraint firstItem="1pw-90-2Vc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vLb-4B-qJ4"/>
+                            <constraint firstItem="Qsc-eD-p2G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xSx-R2-Ra1"/>
+                            <constraint firstItem="Qsc-eD-p2G" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xlk-G9-CdN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn" destination="ObO-h1-n4z" id="7Wz-cU-r8g"/>
+                        <outlet property="generateImage" destination="6RV-YA-gL0" id="akQ-VI-ryw"/>
+                        <outlet property="segment" destination="1pw-90-2Vc" id="3rH-Od-9zr"/>
+                        <outlet property="textField" destination="12G-Wu-Fxd" id="ISl-h2-A8e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="road2.jpg" width="696" height="1238"/>
+    </resources>
+</document>
